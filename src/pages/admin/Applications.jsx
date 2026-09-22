@@ -11,7 +11,7 @@ export const AdminApplications = () => {
   const getImageUrl = (url) => {
     if (!url) return '';
     if (url.startsWith('blob:') || url.startsWith('http')) return url;
-    const baseUrl = api?.defaults?.baseURL ? api.defaults.baseURL.replace('/api', '') : 'http://localhost:5000';
+    const baseUrl = api?.defaults?.baseURL ? api.defaults.baseURL.replace('/api', '') : 'https://job-portal-backend-bx41.onrender.com';
     return `${baseUrl}${url}`;
   };
   const [applications, setApplications] = useState([]);

@@ -17,7 +17,7 @@ export const AdminUsers = () => {
   const getImageUrl = (url) => {
     if (!url) return '';
     if (url.startsWith('blob:') || url.startsWith('http')) return url;
-    const baseUrl = api?.defaults?.baseURL ? api.defaults.baseURL.replace('/api', '') : 'http://localhost:5000';
+    const baseUrl = api?.defaults?.baseURL ? api.defaults.baseURL.replace('/api', '') : 'https://job-portal-backend-bx41.onrender.com';
     return `${baseUrl}${url}`;
   };
   const [users, setUsers] = useState([]);
@@ -225,7 +225,7 @@ export const AdminUsers = () => {
       return;
     }
     
-    const baseUrl = `${import.meta.env.VITE_API_URL || 'http://localhost:5000/api'}/auth/google`;
+    const baseUrl = `${import.meta.env.VITE_API_URL || 'https://job-portal-backend-bx41.onrender.com/api'}/auth/google`;
     const params = new URLSearchParams();
     params.append('role', newUser.role);
     if (newUser.role === 'recruiter') {

@@ -182,7 +182,7 @@ export const Register = () => {
   };
 
   const handleGoogleAuth = () => {
-    window.location.href = `${import.meta.env.VITE_API_URL || 'http://localhost:5000/api'}/auth/google?redirect=${encodeURIComponent(redirectUrl || '')}&role=${formData.role}`;
+    window.location.href = `${import.meta.env.VITE_API_URL || 'https://job-portal-backend-bx41.onrender.com/api'}/auth/google?redirect=${encodeURIComponent(redirectUrl || '')}&role=${formData.role}`;
   };
 
   return (
