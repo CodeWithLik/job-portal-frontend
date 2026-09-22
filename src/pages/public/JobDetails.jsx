@@ -495,7 +495,7 @@ export const JobDetails = () => {
         <div className="space-y-6">
           <div className="flex items-center gap-4">
             {job.logo ? (
-              <img src={`https://job-portal-backend-bx41.onrender.com${job.logo}`} alt={`${job.company} logo`} className="h-16 w-16 rounded-md object-cover border" />
+              <img src={`http://localhost:5000${job.logo}`} alt={`${job.company} logo`} className="h-16 w-16 rounded-md object-cover border" />
             ) : (
               <div className="h-16 w-16 bg-gray-100 rounded-md flex items-center justify-center text-gray-400">
                 <Building className="h-8 w-8" />

@@ -5,7 +5,7 @@ const AuthContext = createContext(null);
 
 // Configure axios base url and interceptors
 export const api = axios.create({
-  baseURL: 'https://job-portal-backend-bx41.onrender.com/api',
+  baseURL: 'http://localhost:5000/api',
 });
 
 api.interceptors.request.use((config) => {

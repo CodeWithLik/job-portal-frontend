@@ -20,7 +20,7 @@ export const VerifyEmail = () => {
 
     const verify = async () => {
       try {
-        const apiUrl = import.meta.env.VITE_API_URL || 'https://job-portal-backend-bx41.onrender.com/api';
+        const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
         const res = await axios.post(`${apiUrl}/auth/verify-email`, { token });
         setStatus('success');
         setMessage(res.data.message || 'Email verified successfully.');

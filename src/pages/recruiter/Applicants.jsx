@@ -244,7 +244,7 @@ const paginatedApplicants = filteredApplicants.slice((currentPage - 1) * itemsPe
                   {app.resume_url ? (
                     <div className="inline-flex shadow-sm w-full sm:w-auto" role="group">
                       <a 
-                        href={app.resume_url.startsWith('http') ? app.resume_url : `https://job-portal-backend-bx41.onrender.com${app.resume_url}`} 
+                        href={app.resume_url.startsWith('http') ? app.resume_url : `http://localhost:5000${app.resume_url}`} 
                         target="_blank" 
                         rel="noreferrer"
                         className="w-full justify-center px-4 py-2 text-sm font-medium text-blue-700 bg-white border border-blue-600 rounded-l-md hover:bg-blue-50 focus:z-10 focus:ring-2 focus:ring-blue-500 flex items-center gap-2 transition-colors duration-200"
@@ -252,13 +252,13 @@ const paginatedApplicants = filteredApplicants.slice((currentPage - 1) * itemsPe
                         <FileText className="h-4 w-4" /> View Resume
                       </a>
                       <a 
-                        href={app.resume_url.startsWith('http') ? app.resume_url : `https://job-portal-backend-bx41.onrender.com${app.resume_url}`} 
+                        href={app.resume_url.startsWith('http') ? app.resume_url : `http://localhost:5000${app.resume_url}`} 
                         download={app.seeker_name ? `${app.seeker_name.replace(/\s+/g, '_')}_Application_Resume.pdf` : 'Application_Resume.pdf'}
                         className="px-3 py-2 text-sm font-medium text-white bg-blue-600 border border-l-0 border-blue-600 rounded-r-md hover:bg-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-500 flex items-center justify-center transition-colors duration-200"
                         title="Download Application Resume"
                         onClick={(e) => {
                           e.preventDefault();
-                          const url = app.resume_url.startsWith('http') ? app.resume_url : `https://job-portal-backend-bx41.onrender.com${app.resume_url}`;
+                          const url = app.resume_url.startsWith('http') ? app.resume_url : `http://localhost:5000${app.resume_url}`;
                           fetch(url)
                             .then(res => res.blob())
                             .then(blob => {

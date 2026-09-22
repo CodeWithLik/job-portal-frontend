@@ -75,7 +75,7 @@ export const Contact = () => {
       const generatedTicketId = `AI-${Math.floor(10000 + Math.random() * 90000)}`;
       const payload = { ...formData, ticketId: generatedTicketId };
 
-      const response = await fetch('https://job-portal-backend-bx41.onrender.com/api/contact', {
+      const response = await fetch('http://localhost:5000/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)

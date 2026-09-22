@@ -82,7 +82,7 @@ export const ApplicantProfile = () => {
         <Card className="md:col-span-4 flex flex-col items-center p-6 text-center">
           <div className="w-32 h-32 rounded-full border-4 border-white shadow-lg overflow-hidden bg-gray-100 flex items-center justify-center mb-4">
             {profile.profile_photo ? (
-              <img src={profile.profile_photo.startsWith('http') ? profile.profile_photo : `https://job-portal-backend-bx41.onrender.com${profile.profile_photo}`} alt={profile.name} className="w-full h-full object-cover" />
+              <img src={profile.profile_photo.startsWith('http') ? profile.profile_photo : `http://localhost:5000${profile.profile_photo}`} alt={profile.name} className="w-full h-full object-cover" />
             ) : (
               <User className="h-16 w-16 text-gray-400" />
             )}
@@ -181,7 +181,7 @@ export const ApplicantProfile = () => {
                     <span className="text-sm font-medium text-gray-900">{profile.resume_name || 'Profile Resume.pdf'}</span>
                     <div className="inline-flex shadow-sm" role="group">
                       <a 
-                        href={profile.resume_url.startsWith('http') ? profile.resume_url : `https://job-portal-backend-bx41.onrender.com${profile.resume_url}`} 
+                        href={profile.resume_url.startsWith('http') ? profile.resume_url : `http://localhost:5000${profile.resume_url}`} 
                         target="_blank" 
                         rel="noreferrer"
                         className="px-4 py-2 text-sm font-medium text-blue-700 bg-white border border-blue-600 rounded-l-md hover:bg-blue-50 focus:z-10 focus:ring-2 focus:ring-blue-500 flex items-center gap-2 transition-colors duration-200"
@@ -189,14 +189,14 @@ export const ApplicantProfile = () => {
                         <FileText className="h-4 w-4" /> View Resume
                       </a>
                       <a 
-                        href={profile.resume_url.startsWith('http') ? profile.resume_url : `https://job-portal-backend-bx41.onrender.com${profile.resume_url}`} 
+                        href={profile.resume_url.startsWith('http') ? profile.resume_url : `http://localhost:5000${profile.resume_url}`} 
                         download={profile.name ? `${profile.name.replace(/\s+/g, '_')}_Profile_Resume.pdf` : 'Profile_Resume.pdf'}
                         className="px-3 py-2 text-sm font-medium text-white bg-blue-600 border border-l-0 border-blue-600 rounded-r-md hover:bg-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-500 flex items-center justify-center transition-colors duration-200"
                         title="Download Resume"
                         onClick={(e) => {
                           // Prevent default cross-origin open behavior and force download
                           e.preventDefault();
-                          const url = profile.resume_url.startsWith('http') ? profile.resume_url : `https://job-portal-backend-bx41.onrender.com${profile.resume_url}`;
+                          const url = profile.resume_url.startsWith('http') ? profile.resume_url : `http://localhost:5000${profile.resume_url}`;
                           fetch(url)
                             .then(response => response.blob())
                             .then(blob => {
