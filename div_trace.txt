@@ -1,0 +1,41 @@
+266 | -1 | </div>
+272 | 0 | <div className="relative h-28 w-28 bg-white rounded-full flex items-center justify-center border-2 border-dashed border-gray-300 text-gray-500 overflow-hidden group mb-5 shadow-sm">
+288 | -1 | </div>
+308 | 0 | <div className={`border-2 border-dashed rounded-lg p-6 text-center bg-gray-50/80 flex-grow flex flex-col items-center justify-center ${errors.resumeUrl ? 'border-red-400 mb-2' : 'border-gray-200 mb-5'}`}>
+310 | 0 | <div className="py-2"><Loader2 className="h-8 w-8 animate-spin mx-auto text-blue-600 mb-3" /></div>
+312 | 1 | <div className="flex flex-col items-center justify-center w-full">
+313 | 2 | <div className="group relative p-3 bg-green-50 border border-green-200 rounded-lg flex items-center justify-between w-full max-w-sm mx-auto mb-2 shadow-sm transition-all hover:shadow">
+314 | 3 | <div className="flex items-center gap-3 overflow-hidden">
+315 | 4 | <div className="bg-green-100 p-1.5 rounded-md flex-shrink-0">
+317 | 3 | </div>
+319 | 2 | </div>
+329 | 1 | </div>
+331 | 0 | </div>
+333 | 1 | <div className="py-2">
+339 | 0 | </div>
+352 | -1 | </div>
+355 | 0 | <div>
+357 | 1 | <div className="flex flex-wrap gap-1.5">
+365 | 0 | </div>
+366 | -1 | </div>
+369 | 0 | <div className="mt-4 border-t border-gray-100 pt-4">
+375 | 1 | <div className="flex items-center gap-2">
+382 | 0 | </div>
+389 | 1 | <div className="mt-4 space-y-4 text-sm bg-white p-5 rounded-md border border-gray-100 shadow-sm animate-in fade-in slide-in-from-top-2 duration-300">
+390 | 2 | <div>
+393 | 1 | </div>
+395 | 2 | <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+396 | 3 | <div className="bg-green-50/50 p-4 rounded-md border border-green-100">
+401 | 2 | </div>
+402 | 3 | <div className="bg-orange-50/50 p-4 rounded-md border border-orange-100">
+407 | 2 | </div>
+408 | 1 | </div>
+410 | 2 | <div className="bg-blue-50/50 p-4 rounded-md border border-blue-100">
+412 | 3 | <div className="flex flex-wrap gap-1.5">
+416 | 2 | </div>
+417 | 1 | </div>
+419 | 2 | <div className="bg-gray-50/80 p-4 rounded-md border border-gray-200">
+424 | 1 | </div>
+425 | 0 | </div>
+427 | -1 | </div>
+431 | -2 | </div>
